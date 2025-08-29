@@ -1,11 +1,65 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Perfil
+      Cadastro
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
+
+  <ion-item>
+    <ion-input
+      label="Nome"
+      placeholder="Digite seu nome"
+      [clearInput]="true">
+    </ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input
+      label="E-mail"
+      type="email"
+      placeholder="meu_email@exemplo.com"
+      [clearInput]="true">
+    </ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input
+      label="Data de nascimento"
+      type="date">
+    </ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input
+      label="RG"
+      type="number"
+      placeholder="Digite apenas números"
+      labelPlacement="stacked">
+    </ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-select label="Cor" placeholder="Com qual cor você se identifica?" cancelText="Fechar" okText="Escolher">
+      <ion-select-option value="Branco">Branco</ion-select-option>
+      <ion-select-option value="Pardo">Pardo</ion-select-option>
+      <ion-select-option value="Preto">Preto</ion-select-option>
+      <ion-select-option value="Amarelo">Amarelo</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-toggle>Receber propagandas</ion-toggle>
+  </ion-item>
+
+  <ion-item>
+    <ion-range labelPlacement="start" label="Faixa salarial" min="1000" max="20000" step="1000" [ticks]="true" [snaps]="true" [pin]="true"></ion-range>
+  </ion-item>
+
+  <ion-item>
+    <ion-checkbox>Concordo com os termos</ion-checkbox>
+  </ion-item>
 
 </ion-content>
