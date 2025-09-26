@@ -18,6 +18,14 @@ const routes: Routes = [
     path: 'badges',
     loadChildren: () => import('./badges/badges.module').then( m => m.BadgesPageModule)
   },
+  {
+    path: 'lista-telefonica',
+    loadChildren: () => import('./lista-telefonica/lista-telefonica.module').then( m => m.ListaTelefonicaPageModule)
+  },
+  {
+    path: 'albuns',
+    loadChildren: () => import('./albuns/albuns.module').then( m => m.AlbunsPageModule)
+  },
 ];
 @NgModule({
   imports: [
