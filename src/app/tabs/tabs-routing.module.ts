@@ -32,6 +32,10 @@ const routes: Routes = [
         loadChildren: () => import('../badges/badges.module').then( m => m.BadgesPageModule)
       },
       {
+        path: 'card',
+        loadChildren: () => import('../card/card.module').then( m => m.CardPageModule)
+      },
+      {
         path: '',
         redirectTo: '/tabs/tab1',
         pathMatch: 'full'

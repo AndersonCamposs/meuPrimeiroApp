@@ -26,6 +26,18 @@ const routes: Routes = [
     path: 'albuns',
     loadChildren: () => import('./albuns/albuns.module').then( m => m.AlbunsPageModule)
   },
+  {
+    path: 'card',
+    loadChildren: () => import('./card/card.module').then( m => m.CardPageModule)
+  },
+  {
+    path: 'wifi',
+    loadChildren: () => import('./wifi/wifi.module').then( m => m.WifiPageModule)
+  },
+  {
+    path: 'bluetooth',
+    loadChildren: () => import('./bluetooth/bluetooth.module').then( m => m.BluetoothPageModule)
+  },
 ];
 @NgModule({
   imports: [

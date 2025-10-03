@@ -1,0 +1,47 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-back-button></ion-back-button>
+      <ion-title>Wifi</ion-title>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <br>
+  <ion-item-divider>
+    Redes conectadas
+  </ion-item-divider>
+  <ion-list>
+    <ion-item detail="true" routerLink="/wifi/rede">
+      <ion-icon name="wifi-outline" slot="start"></ion-icon>
+      <ion-label>
+        Conectado a Rede XYZ
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-item-divider>
+    Redes Disponíveis
+  </ion-item-divider>
+  <ion-list>
+    <ion-item>
+      <ion-icon name="wifi-outline" slot="start"></ion-icon>
+      <ion-label>
+        Rede A
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="wifi-outline" slot="start"></ion-icon>
+      <ion-label>
+        Rede B
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="wifi-outline" slot="start"></ion-icon>
+      <ion-label>
+        Rede C
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
