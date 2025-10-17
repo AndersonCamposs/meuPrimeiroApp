@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Aba 1
+      Home
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,23 +9,31 @@
 <ion-content [fullscreen]="true">
   <ion-item>
     <ion-label>
-      Nome:
+      Fluxo de caixa
     </ion-label>
-    <ion-input></ion-input>
   </ion-item>
 
   <ion-item>
-    <ion-label>
-      Nota:
-    </ion-label>
-    <ion-input></ion-input>
+    <ion-label> Entrada: R$ {{ (valorEntrada.toFixed(2).toString().replace('.', ',')) }}</ion-label>
   </ion-item>
 
-  <ion-button expand="block" color="success">
-    Salvar
+  <ion-item>
+    <ion-label> Saída: R$ {{ (valorSaida.toFixed(2).toString().replace('.', ',')) }}</ion-label>
+  </ion-item>
+
+  <ion-item color={{verificarCor()}}>
+    <ion-label>
+      Total em caixa: R$ {{ (totalCaixa.toFixed(2).toString().replace('.', ',')) }}
+    </ion-label>
+  </ion-item>
+
+  <ion-button color="primary" (click)="adicionar()">
+    Adicionar R$ 1,00
   </ion-button>
 
-  <ion-button expand="block" color="danger">
-    Cancelar
+  <ion-button color="danger" (click)="retirar()">
+    Retirar R$ 1,00
   </ion-button>
+
+
 </ion-content>
