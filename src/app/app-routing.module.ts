@@ -37,7 +37,11 @@ const routes: Routes = [
   {
     path: 'bluetooth',
     loadChildren: () => import('./bluetooth/bluetooth.module').then( m => m.BluetoothPageModule)
+  },  {
+    path: 'avaliacao',
+    loadChildren: () => import('./avaliacao/avaliacao.module').then( m => m.AvaliacaoPageModule)
   },
+
 ];
 @NgModule({
   imports: [
