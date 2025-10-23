@@ -14,7 +14,7 @@ export class LoginPage implements OnInit {
 
   senhaUsuario?: string;
 
-  tentativas: number = 0;
+  tentativas: number = 3;
 
   botaoInativo: boolean = false;
 
@@ -24,13 +24,13 @@ export class LoginPage implements OnInit {
   }
 
   async login() {
-    if (this.tentativas > 2) {
+    if (this.tentativas < 1) {
       this.botaoInativo = true;
       return;
     }
 
     if (this.senhaUsuario != this.senha) {
-      this.tentativas++;
+      this.tentativas--;
       this.senhaUsuario = "";
       await this.exibirAlertErro();
     } else {
@@ -40,7 +40,7 @@ export class LoginPage implements OnInit {
 
   async exibirAlertErro() {
     const toast = await this.toastController.create({
-      message: "Senha incorreta",
+      message: `Senha incorreta, restam ${this.tentativas} tentativas.`,
       duration: 2000
     });
 
