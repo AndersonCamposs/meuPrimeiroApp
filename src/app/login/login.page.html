@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item>
+    <ion-label position="floating">Senha</ion-label>
+    <ion-input type="text" [(ngModel)]="senhaUsuario"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>
+      Status: {{ status }}
+    </ion-label>
+  </ion-item>
+
+  <ion-button color="primary" (click)="login()" [disabled]="botaoInativo">
+    Entrar
+  </ion-button>
+</ion-content>
