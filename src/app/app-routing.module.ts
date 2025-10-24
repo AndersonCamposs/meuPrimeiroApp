@@ -45,6 +45,10 @@ const routes: Routes = [
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
+  {
+    path: 'diretivas',
+    loadChildren: () => import('./diretivas/diretivas.module').then( m => m.DiretivasPageModule)
+  },
 
 ];
 @NgModule({

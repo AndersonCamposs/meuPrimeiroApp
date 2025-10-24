@@ -1,0 +1,71 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Diretivas: aula do dia 23/10/2025</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-chip color="primary" (click)="exibirRock()">Rock</ion-chip>
+  <ion-chip color="secondary" (click)="exibirForro()">Forró</ion-chip>
+  <ion-chip color="tertiary" (click)="exibirSamba()">Samba</ion-chip>
+
+  <ion-item-divider *ngIf="!isRock && !isForro && !isSamba">
+    Escolha uma opção
+  </ion-item-divider>
+
+  <ion-card *ngIf="isRock">
+    <img src="https://as1.ftcdn.net/v2/jpg/09/53/50/04/1000_F_953500441_cCg1GY09uDIoF3sPuaZaaLX4HZ9rVFvl.jpg" />
+    <ion-card-header>
+    <ion-card-title>Rock and Roll</ion-card-title>
+    <ion-card-subtitle>História</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+      when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+      It has survived not only five centuries, but also the leap into electronic typesetting,
+      remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+      Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="isForro">
+    <img src="https://as1.ftcdn.net/v2/jpg/14/38/89/18/1000_F_1438891832_qpXTuvqwQrUT1Fgi8PXoPHIlxQh29yXt.jpg" />
+    <ion-card-header>
+    <ion-card-title>Forró</ion-card-title>
+    <ion-card-subtitle>História</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+      when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+      It has survived not only five centuries, but also the leap into electronic typesetting,
+      remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+      Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="isSamba">
+    <img src="https://as1.ftcdn.net/v2/jpg/17/14/98/84/1000_F_1714988445_2yH2j8UCEhJDsnu5BBHSlqYJENXFhjKb.jpg" />
+    <ion-card-header>
+    <ion-card-title>Rock and Roll</ion-card-title>
+    <ion-card-subtitle>História</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+      when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+      It has survived not only five centuries, but also the leap into electronic typesetting,
+      remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+      Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button (click)="limparTela()" expand="block" color="danger" *ngIf="isRock || isForro || isSamba">
+    Limpar
+  </ion-button>
+
+  <ion-item-divider>
+    Contatos
+  </ion-item-divider>
+</ion-content>
