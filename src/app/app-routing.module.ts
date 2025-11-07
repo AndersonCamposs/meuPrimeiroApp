@@ -49,6 +49,10 @@ const routes: Routes = [
     path: 'diretivas',
     loadChildren: () => import('./diretivas/diretivas.module').then( m => m.DiretivasPageModule)
   },
+  {
+    path: 'persistencia',
+    loadChildren: () => import('./persistencia/persistencia.module').then( m => m.PersistenciaPageModule)
+  },
 
 ];
 @NgModule({

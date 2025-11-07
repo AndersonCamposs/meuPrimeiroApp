@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>persistencia</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item>
+    <ion-input label="Anotação" labelPlacement="floating" [(ngModel)]="textoAnotacao"></ion-input>
+  </ion-item>
+
+  <ion-button (click)="salvarAnotacao()" color="primary">Salvar</ion-button>
+  <ion-button (click)="apagarTudo()" color="danger">Apagar Tudo</ion-button>
+
+  <ion-item-divider>
+    Anotações
+  </ion-item-divider>
+  <ion-list *ngFor="let anotacao of anotacoes, let i = index">
+    <ion-item-sliding>
+      <ion-item>
+        <ion-label>{{ i }} - {{anotacao.texto}}</ion-label>
+      </ion-item>
+
+      <ion-item-options>
+        <ion-item-option color="danger" (click)="apagar(i)">Apagar</ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>

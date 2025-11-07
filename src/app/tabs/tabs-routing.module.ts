@@ -24,16 +24,8 @@ const routes: Routes = [
         loadChildren: () => import('../aula-25-09/aula-25-09.module').then( m => m.Aula2509PageModule)
       },
       {
-        path: 'chips',
-        loadChildren: () => import('../chips/chips.module').then( m => m.ChipsPageModule)
-      },
-      {
-        path: 'badges',
-        loadChildren: () => import('../badges/badges.module').then( m => m.BadgesPageModule)
-      },
-      {
-        path: 'card',
-        loadChildren: () => import('../card/card.module').then( m => m.CardPageModule)
+        path: 'persistencia',
+        loadChildren: () => import('../persistencia/persistencia-routing.module').then( m => m.PersistenciaPageRoutingModule)
       },
       {
         path: '',
